@@ -1,0 +1,397 @@
+// BEGIN_TF_DOCS
+=== Requirements
+
+The following requirements are needed by this module:
+
+- [[requirement_argocd]] <<requirement_argocd,argocd>> (>= 5)
+
+- [[requirement_null]] <<requirement_null,null>> (>= 3)
+
+- [[requirement_utils]] <<requirement_utils,utils>> (>= 1)
+
+=== Providers
+
+The following providers are used by this module:
+
+- [[provider_aws]] <<provider_aws,aws>>
+
+=== Modules
+
+The following Modules are called:
+
+==== [[module_iam_assumable_role_cert_manager]] <<module_iam_assumable_role_cert_manager,iam_assumable_role_cert_manager>>
+
+Source: terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc
+
+Version: 4.0.0
+
+==== [[module_cert-manager]] <<module_cert-manager,cert-manager>>
+
+Source: ../
+
+Version:
+
+=== Resources
+
+The following resources are used by this module:
+
+- https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy[aws_iam_policy.cert_manager] (resource)
+- https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document[aws_iam_policy_document.cert_manager] (data source)
+- https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region[aws_region.current] (data source)
+- https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/route53_zone[aws_route53_zone.this] (data source)
+
+=== Required Inputs
+
+The following input variables are required:
+
+==== [[input_cluster_name]] <<input_cluster_name,cluster_name>>
+
+Description: The name of the Kubernetes cluster to create.
+
+Type: `string`
+
+==== [[input_base_domain]] <<input_base_domain,base_domain>>
+
+Description: The base domain used for Ingresses.
+
+Type: `string`
+
+==== [[input_cluster_oidc_issuer_url]] <<input_cluster_oidc_issuer_url,cluster_oidc_issuer_url>>
+
+Description: n/a
+
+Type: `string`
+
+==== [[input_letsencrypt_issuer_email]] <<input_letsencrypt_issuer_email,letsencrypt_issuer_email>>
+
+Description: E-mail address used to register with Let's Encrypt.
+
+Type: `string`
+
+=== Optional Inputs
+
+The following input variables are optional (have default values):
+
+==== [[input_other_domains]] <<input_other_domains,other_domains>>
+
+Description: Other domains used for Ingresses requiring a DNS-01 challenge for Let's Encrypt validation with cert-manager (e.g. wildcard certificates).
+
+Type: `list(string)`
+
+Default: `[]`
+
+==== [[input_argocd_project]] <<input_argocd_project,argocd_project>>
+
+Description: Name of the Argo CD AppProject where the Application should be created. If not set, the Application will be created in a new AppProject only for this Application.
+
+Type: `string`
+
+Default: `null`
+
+==== [[input_argocd_labels]] <<input_argocd_labels,argocd_labels>>
+
+Description: Labels to attach to the Argo CD Application resource.
+
+Type: `map(string)`
+
+Default: `{}`
+
+==== [[input_destination_cluster]] <<input_destination_cluster,destination_cluster>>
+
+Description: Destination cluster where the application should be deployed.
+
+Type: `string`
+
+Default: `"in-cluster"`
+
+==== [[input_target_revision]] <<input_target_revision,target_revision>>
+
+Description: Override of target revision of the application chart.
+
+Type: `string`
+
+Default: `"v8.0.0"`
+
+==== [[input_enable_service_monitor]] <<input_enable_service_monitor,enable_service_monitor>>
+
+Description: Enable Prometheus ServiceMonitor in the Helm chart.
+
+Type: `bool`
+
+Default: `true`
+
+==== [[input_helm_values]] <<input_helm_values,helm_values>>
+
+Description: Helm values, passed as a list of HCL structures.
+
+Type: `any`
+
+Default: `[]`
+
+==== [[input_deep_merge_append_list]] <<input_deep_merge_append_list,deep_merge_append_list>>
+
+Description: A boolean flag to enable/disable appending lists instead of overwriting them.
+
+Type: `bool`
+
+Default: `false`
+
+==== [[input_app_autosync]] <<input_app_autosync,app_autosync>>
+
+Description: Automated sync options for the Argo CD Application resource.
+
+Type:
+[source,hcl]
+----
+object({
+    allow_empty = optional(bool)
+    prune       = optional(bool)
+    self_heal   = optional(bool)
+  })
+----
+
+Default:
+[source,json]
+----
+{
+  "allow_empty": false,
+  "prune": true,
+  "self_heal": true
+}
+----
+
+==== [[input_dependency_ids]] <<input_dependency_ids,dependency_ids>>
+
+Description: IDs of the other modules on which this module depends on.
+
+Type: `map(string)`
+
+Default: `{}`
+
+==== [[input_letsencrypt_issuer_email_main]] <<input_letsencrypt_issuer_email_main,letsencrypt_issuer_email_main>>
+
+Description: E-mail address used to register with Let's Encrypt.
+
+Type: `string`
+
+Default: `null`
+
+==== [[input_use_default_dns01_solver]] <<input_use_default_dns01_solver,use_default_dns01_solver>>
+
+Description: Whether to use the default dns01 solver configuration.
+
+Type: `bool`
+
+Default: `true`
+
+==== [[input_use_default_http01_solver]] <<input_use_default_http01_solver,use_default_http01_solver>>
+
+Description: Whether to use the default http01 solver configuration.
+
+Type: `bool`
+
+Default: `true`
+
+==== [[input_custom_solver_configurations]] <<input_custom_solver_configurations,custom_solver_configurations>>
+
+Description: List of additional solver configurations, appended to the default dns01 and http01 solvers (if enabled).
+
+Type: `list(any)`
+
+Default: `[]`
+
+=== Outputs
+
+The following outputs are exported:
+
+==== [[output_id]] <<output_id,id>>
+
+Description: ID to pass other modules in order to refer to this module as a dependency.
+
+==== [[output_cluster_issuers]] <<output_cluster_issuers,cluster_issuers>>
+
+Description: List of cluster issuers created by cert-manager.
+// END_TF_DOCS
+// BEGIN_TF_TABLES
+= Requirements
+
+[cols="a,a",options="header,autowidth"]
+|===
+|Name |Version
+|[[requirement_argocd]] <<requirement_argocd,argocd>> |>= 5
+|[[requirement_null]] <<requirement_null,null>> |>= 3
+|[[requirement_utils]] <<requirement_utils,utils>> |>= 1
+|===
+
+= Providers
+
+[cols="a,a",options="header,autowidth"]
+|===
+|Name |Version
+|[[provider_aws]] <<provider_aws,aws>> |n/a
+|===
+
+= Modules
+
+[cols="a,a,a",options="header,autowidth"]
+|===
+|Name |Source |Version
+|[[module_iam_assumable_role_cert_manager]] <<module_iam_assumable_role_cert_manager,iam_assumable_role_cert_manager>> |terraform-aws-modules/iam/aws//modules/iam-assumable-role-with-oidc |4.0.0
+|[[module_cert-manager]] <<module_cert-manager,cert-manager>> |../ |
+|===
+
+= Resources
+
+[cols="a,a",options="header,autowidth"]
+|===
+|Name |Type
+|https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy[aws_iam_policy.cert_manager] |resource
+|https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document[aws_iam_policy_document.cert_manager] |data source
+|https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region[aws_region.current] |data source
+|https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/route53_zone[aws_route53_zone.this] |data source
+|===
+
+= Inputs
+
+[cols="a,a,a,a,a",options="header,autowidth"]
+|===
+|Name |Description |Type |Default |Required
+|[[input_cluster_name]] <<input_cluster_name,cluster_name>>
+|The name of the Kubernetes cluster to create.
+|`string`
+|n/a
+|yes
+
+|[[input_base_domain]] <<input_base_domain,base_domain>>
+|The base domain used for Ingresses.
+|`string`
+|n/a
+|yes
+
+|[[input_cluster_oidc_issuer_url]] <<input_cluster_oidc_issuer_url,cluster_oidc_issuer_url>>
+|n/a
+|`string`
+|n/a
+|yes
+
+|[[input_other_domains]] <<input_other_domains,other_domains>>
+|Other domains used for Ingresses requiring a DNS-01 challenge for Let's Encrypt validation with cert-manager (e.g. wildcard certificates).
+|`list(string)`
+|`[]`
+|no
+
+|[[input_letsencrypt_issuer_email]] <<input_letsencrypt_issuer_email,letsencrypt_issuer_email>>
+|E-mail address used to register with Let's Encrypt.
+|`string`
+|n/a
+|yes
+
+|[[input_argocd_project]] <<input_argocd_project,argocd_project>>
+|Name of the Argo CD AppProject where the Application should be created. If not set, the Application will be created in a new AppProject only for this Application.
+|`string`
+|`null`
+|no
+
+|[[input_argocd_labels]] <<input_argocd_labels,argocd_labels>>
+|Labels to attach to the Argo CD Application resource.
+|`map(string)`
+|`{}`
+|no
+
+|[[input_destination_cluster]] <<input_destination_cluster,destination_cluster>>
+|Destination cluster where the application should be deployed.
+|`string`
+|`"in-cluster"`
+|no
+
+|[[input_target_revision]] <<input_target_revision,target_revision>>
+|Override of target revision of the application chart.
+|`string`
+|`"v8.0.0"`
+|no
+
+|[[input_enable_service_monitor]] <<input_enable_service_monitor,enable_service_monitor>>
+|Enable Prometheus ServiceMonitor in the Helm chart.
+|`bool`
+|`true`
+|no
+
+|[[input_helm_values]] <<input_helm_values,helm_values>>
+|Helm values, passed as a list of HCL structures.
+|`any`
+|`[]`
+|no
+
+|[[input_deep_merge_append_list]] <<input_deep_merge_append_list,deep_merge_append_list>>
+|A boolean flag to enable/disable appending lists instead of overwriting them.
+|`bool`
+|`false`
+|no
+
+|[[input_app_autosync]] <<input_app_autosync,app_autosync>>
+|Automated sync options for the Argo CD Application resource.
+|
+
+[source]
+----
+object({
+    allow_empty = optional(bool)
+    prune       = optional(bool)
+    self_heal   = optional(bool)
+  })
+----
+
+|
+
+[source]
+----
+{
+  "allow_empty": false,
+  "prune": true,
+  "self_heal": true
+}
+----
+
+|no
+
+|[[input_dependency_ids]] <<input_dependency_ids,dependency_ids>>
+|IDs of the other modules on which this module depends on.
+|`map(string)`
+|`{}`
+|no
+
+|[[input_letsencrypt_issuer_email_main]] <<input_letsencrypt_issuer_email_main,letsencrypt_issuer_email_main>>
+|E-mail address used to register with Let's Encrypt.
+|`string`
+|`null`
+|no
+
+|[[input_use_default_dns01_solver]] <<input_use_default_dns01_solver,use_default_dns01_solver>>
+|Whether to use the default dns01 solver configuration.
+|`bool`
+|`true`
+|no
+
+|[[input_use_default_http01_solver]] <<input_use_default_http01_solver,use_default_http01_solver>>
+|Whether to use the default http01 solver configuration.
+|`bool`
+|`true`
+|no
+
+|[[input_custom_solver_configurations]] <<input_custom_solver_configurations,custom_solver_configurations>>
+|List of additional solver configurations, appended to the default dns01 and http01 solvers (if enabled).
+|`list(any)`
+|`[]`
+|no
+
+|===
+
+= Outputs
+
+[cols="a,a",options="header,autowidth"]
+|===
+|Name |Description
+|[[output_id]] <<output_id,id>> |ID to pass other modules in order to refer to this module as a dependency.
+|[[output_cluster_issuers]] <<output_cluster_issuers,cluster_issuers>> |List of cluster issuers created by cert-manager.
+|===
+// END_TF_TABLES
