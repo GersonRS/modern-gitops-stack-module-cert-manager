@@ -1,6 +1,6 @@
 = modern-gitops-stack-module-cert-manager
 // Document attributes to replace along the document
-:cert-manager-chart-version: 1.14.3
+:cert-manager-chart-version: 1.14.4
 :chart-url: https://github.com/cert-manager/cert-manager/tree/master/deploy/charts/cert-manager
 
 A https://modern-gitops-stack.io[Modern Gitops Stack] module for installing and configuring https://cert-manager.io/[cert-manager].
