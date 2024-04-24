@@ -31,6 +31,28 @@ locals {
           enabled = var.enable_service_monitor
         }
       }
+      resources = {
+        requests = { for k, v in var.resources.controller.requests : k => v if v != null }
+        limits   = { for k, v in var.resources.controller.limits : k => v if v != null }
+      }
+      webhook = {
+        resources = {
+          requests = { for k, v in var.resources.webhook.requests : k => v if v != null }
+          limits   = { for k, v in var.resources.webhook.limits : k => v if v != null }
+        }
+      }
+      cainjector = {
+        resources = {
+          requests = { for k, v in var.resources.cainjector.requests : k => v if v != null }
+          limits   = { for k, v in var.resources.cainjector.limits : k => v if v != null }
+        }
+      }
+      startupapicheck = {
+        resources = {
+          requests = { for k, v in var.resources.startupapicheck.requests : k => v if v != null }
+          limits   = { for k, v in var.resources.startupapicheck.limits : k => v if v != null }
+        }
+      }
     }
     issuers = {
       default = local.issuers.default

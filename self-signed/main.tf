@@ -7,7 +7,7 @@ resource "tls_self_signed_cert" "root" {
   private_key_pem = tls_private_key.root.private_key_pem
 
   subject {
-    common_name  = "Modern GitOps Stack"
+    common_name  = "Modern Gitops Stack"
     organization = "GersonRS"
   }
 
@@ -33,6 +33,7 @@ module "cert-manager" {
 
   helm_values = concat(local.helm_values, var.helm_values)
 
+  resources                     = var.resources
   letsencrypt_issuer_email_main = "gersonrodriguessantos8@gmail.com"
 
   dependency_ids = var.dependency_ids
