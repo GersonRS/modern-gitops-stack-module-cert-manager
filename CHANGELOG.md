@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v1.0.0...v1.1.0) (2024-04-27)
+
+
+### Features
+
+* **chart:** patch update of dependencies on cert-manager chart ([c7a4803](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/c7a48036e6a3d72e02f9fad536f61b1e54a4ef83))
+* **docs:** update documentation ([59ef3da](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/59ef3da1c15ca41912cddd4820b43d6e1048edbb))
+
 ## 1.0.0 (2024-04-24)
 
 
