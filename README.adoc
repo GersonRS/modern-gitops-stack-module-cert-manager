@@ -13,7 +13,7 @@ The cert-manager chart used by this module is shipped in this repository as well
 |*{cert-manager-chart-version}* |{chart-url}[Chart] |https://artifacthub.io/packages/helm/cert-manager/cert-manager/{cert-manager-chart-version}?modal=values[`values.yaml`]
 |===
 
-*Since this module is meant to be instantiated using its variants, the usage documentation is available in each variant* ( xref:./aks/README.adoc[AKS] | xref:./eks/README.adoc[EKS] | xref:./scaleway/README.adoc[Scaleway] | xref:./self-signed/README.adoc[Self-signed] | xref:./sks/README.adoc[SKS] ).
+*Since this module is meant to be instantiated using its variants, the usage documentation is available in each variant* ( xref:./aks/README.adoc[AKS] | xref:./eks/README.adoc[EKS] | xref:./self-signed/README.adoc[Self-signed] ).
 
 Below you will only find the technical reference automatically generated from the `*.tf` files on the root module.
 

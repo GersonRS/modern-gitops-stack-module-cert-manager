@@ -8,4 +8,4 @@ jobs:
   terraform-docs:
     uses: GersonRS/modern-gitops-stack/.github/workflows/modules-terraform-docs.yaml@main
     with:
-      variants: "aks,eks,scaleway,self-signed,sks"
+      variants: "aks,eks,self-signed"
