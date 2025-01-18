@@ -3,7 +3,7 @@
 
 The following requirements are needed by this module:
 
-- [[requirement_argocd]] <<requirement_argocd,argocd>> (>= 5)
+- [[requirement_argocd]] <<requirement_argocd,argocd>> (>= 6)
 
 - [[requirement_null]] <<requirement_null,null>> (>= 3)
 
@@ -184,6 +184,22 @@ object({
 
 Default: `{}`
 
+==== [[input_replicas]] <<input_replicas,replicas>>
+
+Description: Number of replicas for cert-manager's components.
+
+Type:
+[source,hcl]
+----
+object({
+    controller = optional(number, 1)
+    webhook    = optional(number, 1)
+    cainjector = optional(number, 1)
+  })
+----
+
+Default: `{}`
+
 ==== [[input_letsencrypt_issuer_email_main]] <<input_letsencrypt_issuer_email_main,letsencrypt_issuer_email_main>>
 
 Description: E-mail address used to register with Let's Encrypt.
@@ -238,7 +254,7 @@ Description: The CA certificate used by the `ca-issuer`. You can copy this value
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Version
-|[[requirement_argocd]] <<requirement_argocd,argocd>> |>= 5
+|[[requirement_argocd]] <<requirement_argocd,argocd>> |>= 6
 |[[requirement_null]] <<requirement_null,null>> |>= 3
 |[[requirement_utils]] <<requirement_utils,utils>> |>= 1
 |===
@@ -402,6 +418,22 @@ object({
       }), {})
     }), {})
 
+  })
+----
+
+|`{}`
+|no
+
+|[[input_replicas]] <<input_replicas,replicas>>
+|Number of replicas for cert-manager's components.
+|
+
+[source]
+----
+object({
+    controller = optional(number, 1)
+    webhook    = optional(number, 1)
+    cainjector = optional(number, 1)
   })
 ----
 
