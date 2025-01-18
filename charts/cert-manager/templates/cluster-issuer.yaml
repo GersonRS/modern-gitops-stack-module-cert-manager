@@ -2,13 +2,13 @@
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: {{ $.Values.issuers.default.name | quote }}
+  name: {{ $.Values.clusterIssuers.default.name | quote }}
   annotations:
     argocd.argoproj.io/sync-wave: "5"
 spec:
   selfSigned: {}
 {{- if index $.Values "cert-manager" }}
-{{- if index $.Values "cert-manager" "tlsCrt" }}
+{{- if $.Values.clusterIssuers.ca.tlsCrt }}
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -20,10 +20,10 @@ spec:
   ca:
     secretName: ca-key-pair
 {{- end }}
-{{- if index $.Values "cert-manager" "clusterIssuers" }}
-{{- if index $.Values "cert-manager" "clusterIssuers" "letsencrypt" }}
-{{- if index $.Values "cert-manager" "clusterIssuers" "letsencrypt" "enabled" }}
-{{- range $name, $issuer := index $.Values "issuers" "letsencrypt" }}
+{{- if index $.Values.clusterIssuers }}
+{{- if index $.Values.clusterIssuers.letsencrypt }}
+{{- if index $.Values.clusterIssuers.letsencrypt.enabled }}
+{{- range $name, $issuer := index $.Values.clusterIssuers.letsencrypt.issuers }}
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -37,7 +37,7 @@ spec:
     server: {{ $issuer.server }}
     privateKeySecretRef:
       name: {{ $name }}
-    {{ index $.Values "cert-manager" "clusterIssuers" "acme" | toYaml | nindent 4 }}
+    {{ index $.Values.clusterIssuers.letsencrypt.acme | toYaml | nindent 4 }}
 {{- end }}
 {{- end }}
 {{- end }}

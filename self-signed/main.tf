@@ -34,6 +34,7 @@ module "cert-manager" {
   helm_values = concat(local.helm_values, var.helm_values)
 
   resources                     = var.resources
+  replicas                      = var.replicas
   letsencrypt_issuer_email_main = "gersonrodriguessantos8@gmail.com"
 
   dependency_ids = var.dependency_ids
