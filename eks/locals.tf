@@ -38,10 +38,12 @@ locals {
           "eks.amazonaws.com/role-arn" = local.assumable_role_arn
         }
       }
-      clusterIssuers = {
-        letsencrypt = {
-          enabled = true
-        }
+    }
+
+    # This structure will be merged with the one with the same name on the root locals.tf.
+    clusterIssuers = {
+      letsencrypt = {
+        enabled = true
         acme = {
           solvers = local.solvers
         }

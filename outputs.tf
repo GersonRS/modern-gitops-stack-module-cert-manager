@@ -9,9 +9,9 @@ output "cluster_issuers" {
     default = local.issuers.default.name
     }, {
     for issuer_id, issuer in { ca = local.issuers.ca.name } : issuer_id => issuer
-    if can(var.helm_values[0].cert-manager.tlsCrt) && can(var.helm_values[0].cert-manager.tlsKey)
+    if can(var.helm_values[0].clusterIssuers.ca.tlsCrt) && can(var.helm_values[0].clusterIssuers.ca.tlsKey)
     }, {
     for issuer_id, issuer in local.issuers.letsencrypt : issuer_id => issuer.name
-    if var.helm_values[0].cert-manager.clusterIssuers.letsencrypt.enabled
+    if var.helm_values[0].clusterIssuers.letsencrypt.enabled
   })
 }

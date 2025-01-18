@@ -124,6 +124,16 @@ variable "resources" {
   default = {}
 }
 
+variable "replicas" {
+  description = "Number of replicas for cert-manager's components."
+  type = object({
+    controller = optional(number, 1)
+    webhook    = optional(number, 1)
+    cainjector = optional(number, 1)
+  })
+  default = {}
+}
+
 variable "letsencrypt_issuer_email_main" {
   description = "E-mail address used to register with Let's Encrypt."
   type        = string

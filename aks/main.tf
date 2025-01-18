@@ -1,5 +1,5 @@
 # This null_resource is required otherwise Terraform would try to read the resource group data even if the resource
-# group was not created yet. 
+# group was not created yet.
 resource "null_resource" "dependencies" {
   triggers = var.dependency_ids
 }
@@ -55,6 +55,7 @@ module "cert-manager" {
   helm_values = concat(local.helm_values, var.helm_values)
 
   resources                     = var.resources
+  replicas                      = var.replicas
   letsencrypt_issuer_email_main = var.letsencrypt_issuer_email
 
   dependency_ids = var.dependency_ids

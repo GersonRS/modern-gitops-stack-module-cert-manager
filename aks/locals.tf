@@ -44,48 +44,14 @@ locals {
           "azure.workload.identity/client-id" = azurerm_user_assigned_identity.cert_manager.client_id
         }
       }
-      clusterIssuers = {
-        letsencrypt = {
-          enabled = true
-        }
+    }
+
+    # This structure will be merged with the one with the same name on the root locals.tf.
+    clusterIssuers = {
+      letsencrypt = {
+        enabled = true
         acme = {
           solvers = local.solvers
-        }
-      }
-      replicaCount = 2
-      resources = {
-        limits = {
-          memory = "128Mi"
-        }
-        requests = {
-          cpu    = "10m"
-          memory = "32Mi"
-        }
-      }
-
-      webhook = {
-        replicaCount = 2
-        resources = {
-          limits = {
-            memory = "64Mi"
-          }
-          requests = {
-            cpu    = "10m"
-            memory = "32Mi"
-          }
-        }
-      }
-
-      cainjector = {
-        replicaCount = 2
-        resources = {
-          limits = {
-            memory = "128Mi"
-          }
-          requests = {
-            cpu    = "10m"
-            memory = "32Mi"
-          }
         }
       }
     }
