@@ -8,6 +8,9 @@ locals {
         tlsCrt = base64encode(tls_self_signed_cert.root.cert_pem)
         tlsKey = base64encode(tls_private_key.root.private_key_pem)
       }
+      letsencrypt = {
+        enabled = false
+      }
     }
   }]
 }
