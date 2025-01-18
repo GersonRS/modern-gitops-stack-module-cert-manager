@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.6.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.5.0...v2.6.0) (2025-01-18)
+
+
+### 🚀 New Features
+
+* update project ([52c940d](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/52c940d0b07adbc7ba7ed900c976a2b98ffb1fe2))
+
+## [2.5.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.4.0...v2.5.0) (2024-05-01)
+
+
+### 🚀 New Features
+
+* change chart update to include secrets ([c26e000](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/c26e00017822217a96bd09dbf2c0d91a8b00136e))
+
+
+### 📚 Documentation
+
+* **terraform-docs:** generate docs and write to README.adoc ([4025cb9](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/4025cb9047d989e7cab628e223ad7599689db825))
+
 ## [2.4.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.3.0...v2.4.0) (2024-05-01)
 
 
