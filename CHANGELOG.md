@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.6.2](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.1...v2.6.2) (2025-01-18)
+
+
+### 🔥 Bug Fixes
+
+* fix cluster issuer ca name ([16d0f4a](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/16d0f4a32d0bf495bd4c5b0128029d9fb302ac99))
+
+
+### ⚙️ Chores
+
+* release 2.6.1 ([9b61ebf](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/9b61ebff4a12498a627ed66b3b04be00783afe1a))
+
 ## [2.6.1](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.0...v2.6.1) (2025-01-18)
 
 
