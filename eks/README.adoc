@@ -110,7 +110,7 @@ Description: Override of target revision of the application chart.
 
 Type: `string`
 
-Default: `"v2.4.0"`
+Default: `"v2.6.0"`
 
 ==== [[input_enable_service_monitor]] <<input_enable_service_monitor,enable_service_monitor>>
 
@@ -383,7 +383,7 @@ Description: List of cluster issuers created by cert-manager.
 |[[input_target_revision]] <<input_target_revision,target_revision>>
 |Override of target revision of the application chart.
 |`string`
-|`"v2.4.0"`
+|`"v2.6.0"`
 |no
 
 |[[input_enable_service_monitor]] <<input_enable_service_monitor,enable_service_monitor>>
