@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.1](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.0...v2.6.1) (2025-01-18)
+
+
+### 🔥 Bug Fixes
+
+* fix letsencrypt var ([f86f58c](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/f86f58c3c09a3a91231731a9529df5fd2c3b13d6))
+
 ## [2.6.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.5.0...v2.6.0) (2025-01-18)
 
 
