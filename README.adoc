@@ -34,9 +34,9 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- [[provider_utils]] <<provider_utils,utils>> (>= 1)
-
 - [[provider_argocd]] <<provider_argocd,argocd>> (>= 6)
+
+- [[provider_utils]] <<provider_utils,utils>> (>= 1)
 
 - [[provider_null]] <<provider_null,null>> (>= 3)
 
@@ -84,7 +84,7 @@ Description: Override of target revision of the application chart.
 
 Type: `string`
 
-Default: `"v2.4.0"`
+Default: `"v2.6.0"`
 
 ==== [[input_enable_service_monitor]] <<input_enable_service_monitor,enable_service_monitor>>
 
@@ -284,8 +284,8 @@ Description: List of cluster issuers created by cert-manager.
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Version
-|[[provider_utils]] <<provider_utils,utils>> |>= 1
 |[[provider_argocd]] <<provider_argocd,argocd>> |>= 6
+|[[provider_utils]] <<provider_utils,utils>> |>= 1
 |[[provider_null]] <<provider_null,null>> |>= 3
 |===
 
@@ -327,7 +327,7 @@ Description: List of cluster issuers created by cert-manager.
 |[[input_target_revision]] <<input_target_revision,target_revision>>
 |Override of target revision of the application chart.
 |`string`
-|`"v2.4.0"`
+|`"v2.6.0"`
 |no
 
 |[[input_enable_service_monitor]] <<input_enable_service_monitor,enable_service_monitor>>
