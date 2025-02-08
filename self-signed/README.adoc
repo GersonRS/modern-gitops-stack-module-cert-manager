@@ -66,7 +66,7 @@ Description: Override of target revision of the application chart.
 
 Type: `string`
 
-Default: `"v2.6.3"`
+Default: `"v2.6.4"`
 
 ==== [[input_enable_service_monitor]] <<input_enable_service_monitor,enable_service_monitor>>
 
@@ -310,7 +310,7 @@ Description: The CA certificate used by the `ca-issuer`. You can copy this value
 |[[input_target_revision]] <<input_target_revision,target_revision>>
 |Override of target revision of the application chart.
 |`string`
-|`"v2.6.3"`
+|`"v2.6.4"`
 |no
 
 |[[input_enable_service_monitor]] <<input_enable_service_monitor,enable_service_monitor>>
