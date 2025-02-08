@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.6.4](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.3...v2.6.4) (2025-02-08)
+
+
+### 📚 Documentation
+
+* **terraform-docs:** generate docs and write to README.adoc ([864ae7d](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/864ae7db9eff2de1d011f4d5f520784bf3e9e26e))
+* **terraform-docs:** generate docs and write to README.adoc ([134075e](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/134075e94c16283ad27cbdfeaa4ceaee5ea2eded))
+
+
+### ⌨️ Code Refactoring
+
+* remove readme.md ([a8cd026](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/a8cd02601383cfb5cf6f451e7b7c0105fea81293))
+
 ## [2.6.3](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.2...v2.6.3) (2025-02-08)
 
 
