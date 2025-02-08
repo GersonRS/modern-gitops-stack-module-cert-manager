@@ -1,5 +1,32 @@
 # Changelog
 
+## [2.6.3](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.2...v2.6.3) (2025-02-08)
+
+
+### 🔥 Bug Fixes
+
+* fix add-to-project workflow ([6b9e189](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/6b9e189f2fb56036e6fca153dd3731355733be2d))
+* fix add-to-project workflow ([5da12c5](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/5da12c5eec71ef8ad020fd8998c3e842d9e00f1c))
+
+
+### 📚 Documentation
+
+* **terraform-docs:** generate docs and write to README.adoc ([78bfc06](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/78bfc06971cd0eae62d52f6fa76864c86465ce2f))
+* **terraform-docs:** generate docs and write to README.adoc ([e966582](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/e966582ad3877d69c982a22783067dba4dd74d61))
+* **terraform-docs:** generate docs and write to README.adoc ([95b53ab](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/95b53ab9a94b420666352a5a8b7bc140352bc000))
+* **terraform-docs:** generate docs and write to README.adoc ([fb14d0d](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/fb14d0d8945b51853635599605e130bdbe0c0649))
+* **terraform-docs:** generate docs and write to README.adoc ([ff786d8](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/ff786d834b77715ed2d6a4b2533ee9386d82b8fc))
+* **terraform-docs:** generate docs and write to README.adoc ([9e42879](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/9e4287924a506faecda76048bcd27b2727f2e2a3))
+
+
+### ⌨️ Code Refactoring
+
+* adjust add-to-ptoject workflow ([3205db8](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/3205db8d1f714e1718c3c85de6a45477df40d5aa))
+* adjust schedule cron chart-update workflow ([6624d48](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/6624d48d20162a47487a2ae021f9d6ca0dc03a98))
+* adjust schedule cron chart-update workflow ([4d74fc0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/4d74fc013cdeaf0a49e57d4392887d86322f3656))
+* adjust schedule cron chart-update workflow ([e731dbf](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/e731dbf6c815b495226db2b1aa209bfc2571c229))
+* adjust schedule cron chart-update workflow ([bab761e](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/bab761e9eebc244531a882b394c7e11c9c7736f1))
+
 ## [2.6.2](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.1...v2.6.2) (2025-01-18)
 
 
