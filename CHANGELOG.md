@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.6.5](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.4...v2.6.5) (2025-02-08)
+
+
+### 📚 Documentation
+
+* **terraform-docs:** generate docs and write to README.adoc ([3f79a73](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/3f79a735b9a2d28b6660d0b3b01be539dc31e169))
+
+
+### ⌨️ Code Refactoring
+
+* update pre-commit-hooks config file ([9bcaa6a](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/9bcaa6ad37082795bcf5d2a1a4571ffb1b695ea4))
+
 ## [2.6.4](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.3...v2.6.4) (2025-02-08)
 
 
