@@ -1,5 +1,4 @@
----
-name: "pr-issues-project"
+name: "add-to-project"
 
 on:
   issues:
@@ -7,7 +6,7 @@ on:
       - opened
       - reopened
 
-  pull_request:
+  pull_request_target:
     types:
       - opened
       - reopened
