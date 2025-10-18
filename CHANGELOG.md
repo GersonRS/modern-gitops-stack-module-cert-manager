@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.8.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.7.0...v2.8.0) (2025-10-18)
+
+
+### 🚀 New Features
+
+* **self-signed:** add Let's Encrypt support with HTTP-01 solver configuration ([45418e9](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/45418e9492d062ab566c45eb3603e62e64796f17))
+* **self-signed:** add Let's Encrypt support with HTTP-01 solver configuration ([ca5ebc7](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/ca5ebc708dc19d106443d43258d2bf91de79fdd4))
+
 ## [2.7.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.6...v2.7.0) (2025-10-18)
 
 
