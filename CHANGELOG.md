@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.7.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.6...v2.7.0) (2025-10-18)
+
+
+### 🚀 New Features
+
+* **chart:** minor update of dependencies on cert-manager chart ([3cdccc6](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/3cdccc63c551f4446ee81d21203963be5e387cf3))
+* **chart:** minor update of dependencies on cert-manager chart ([fbf1274](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/fbf1274458fc62b541a2951867593e7a9b193ec4))
+
+
+### ⌨️ Code Refactoring
+
+* try adjust code 5 ([7492bd3](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/7492bd359663790db0792a6786cd1a2ed1ac57ea))
+
 ## [2.6.6](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.5...v2.6.6) (2025-02-08)
 
 
