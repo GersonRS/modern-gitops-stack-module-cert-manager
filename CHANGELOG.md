@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.9.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.8.0...v2.9.0) (2026-01-26)
+
+
+### 🚀 New Features
+
+* adjust workflows ([fa454c3](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/fa454c33123d67d0cb9e3bcc3dac622db3ee91bd))
+* adjust workflows ([c3e28ba](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/c3e28ba65698f38f7f5e8592595a61ef019460f4))
+* update chart ([cdff9b1](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/cdff9b136209cfa18dd040c8a614419153898517))
+* update chart ([21a2f1c](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/21a2f1cd3d0920f84153ea5c7f9fa478dfb48e3a))
+
 ## [2.8.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.7.0...v2.8.0) (2025-10-18)
 
 
