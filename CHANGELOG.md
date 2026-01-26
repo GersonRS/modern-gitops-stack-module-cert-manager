@@ -1,5 +1,59 @@
 # Changelog
 
+## [2.8.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.7.0...v2.8.0) (2025-10-18)
+
+
+### 🚀 New Features
+
+* **self-signed:** add Let's Encrypt support with HTTP-01 solver configuration ([45418e9](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/45418e9492d062ab566c45eb3603e62e64796f17))
+* **self-signed:** add Let's Encrypt support with HTTP-01 solver configuration ([ca5ebc7](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/ca5ebc708dc19d106443d43258d2bf91de79fdd4))
+
+## [2.7.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.6...v2.7.0) (2025-10-18)
+
+
+### 🚀 New Features
+
+* **chart:** minor update of dependencies on cert-manager chart ([3cdccc6](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/3cdccc63c551f4446ee81d21203963be5e387cf3))
+* **chart:** minor update of dependencies on cert-manager chart ([fbf1274](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/fbf1274458fc62b541a2951867593e7a9b193ec4))
+
+
+### ⌨️ Code Refactoring
+
+* try adjust code 5 ([7492bd3](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/7492bd359663790db0792a6786cd1a2ed1ac57ea))
+
+## [2.6.6](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.5...v2.6.6) (2025-02-08)
+
+
+### ⌨️ Code Refactoring
+
+* adjust workflows ([23fceec](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/23fceec7681576a39aff0147481b0206397f890b))
+* adjust workflows ([a976da3](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/a976da34af83c865ab71e7ece7054725c20963cd))
+
+## [2.6.5](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.4...v2.6.5) (2025-02-08)
+
+
+### 📚 Documentation
+
+* **terraform-docs:** generate docs and write to README.adoc ([3f79a73](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/3f79a735b9a2d28b6660d0b3b01be539dc31e169))
+
+
+### ⌨️ Code Refactoring
+
+* update pre-commit-hooks config file ([9bcaa6a](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/9bcaa6ad37082795bcf5d2a1a4571ffb1b695ea4))
+
+## [2.6.4](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.3...v2.6.4) (2025-02-08)
+
+
+### 📚 Documentation
+
+* **terraform-docs:** generate docs and write to README.adoc ([864ae7d](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/864ae7db9eff2de1d011f4d5f520784bf3e9e26e))
+* **terraform-docs:** generate docs and write to README.adoc ([134075e](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/134075e94c16283ad27cbdfeaa4ceaee5ea2eded))
+
+
+### ⌨️ Code Refactoring
+
+* remove readme.md ([a8cd026](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/commit/a8cd02601383cfb5cf6f451e7b7c0105fea81293))
+
 ## [2.6.3](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.6.2...v2.6.3) (2025-02-08)
 
 
