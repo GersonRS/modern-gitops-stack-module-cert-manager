@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.10.0](https://github.com/gersonrs/modern-gitops-stack-module-cert-manager/compare/v2.9.0...v2.10.0) (2026-07-11)
+
+
+### 🚀 New Features
+
+* add namespace_labels variable to all modules ([fbfd3b6](https://github.com/gersonrs/modern-gitops-stack-module-cert-manager/commit/fbfd3b62dae8d92dcc4ec42584f21393c5136650))
+* add namespace_labels variable to all modules ([7cea3ce](https://github.com/gersonrs/modern-gitops-stack-module-cert-manager/commit/7cea3ce516497d9e7172ffb249b910ad6304449c))
+
 ## [2.9.0](https://github.com/GersonRS/modern-gitops-stack-module-cert-manager/compare/v2.8.0...v2.9.0) (2026-01-26)
 
 
