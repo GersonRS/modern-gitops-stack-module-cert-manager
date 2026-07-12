@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.11.0](https://github.com/gersonrs/modern-gitops-stack-module-cert-manager/compare/v2.10.0...v2.11.0) (2026-07-12)
+
+
+### 🚀 New Features
+
+* adjust code ([8276b4c](https://github.com/gersonrs/modern-gitops-stack-module-cert-manager/commit/8276b4cc574ea70f5e97a83d13b35e08b2636521))
+* adjust code ([b419c15](https://github.com/gersonrs/modern-gitops-stack-module-cert-manager/commit/b419c15e05bc227c5356d49c6d283624d2e090a3))
+
 ## [2.10.0](https://github.com/gersonrs/modern-gitops-stack-module-cert-manager/compare/v2.9.0...v2.10.0) (2026-07-11)
 
 
